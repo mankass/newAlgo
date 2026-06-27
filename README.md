@@ -14,10 +14,4 @@ src/main/kotlin/
     └── math.kt            — математические задачи
 ```
 
-## Сборка
-
-```bash
-./gradlew build
-```
-
 Kotlin 2.2.0, JVM 21.
