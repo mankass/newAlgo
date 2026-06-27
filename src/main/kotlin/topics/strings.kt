@@ -1,6 +1,9 @@
 package org.example.topics
 
-/** [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) */
+/**
+ * Find the longest common prefix string amongst an array of strings.
+ * [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
+ */
 fun longestCommonPrefix(strs: Array<String>): String {
     var prefix = strs.first()
     for (word in strs) {
@@ -11,7 +14,10 @@ fun longestCommonPrefix(strs: Array<String>): String {
     return prefix
 }
 
-/** [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/) */
+/**
+ * Convert Roman numeral string to integer.
+ * [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/)
+ */
 fun romanToInt(s: String): Int {
     var number = 0
     var prevValue = 0
@@ -33,7 +39,7 @@ fun romanToInt(s: String): Int {
     return number
 }
 
-/** helper for romanToInt */
+/** Map Roman character to its integer value. Helper for romanToInt. */
 fun getValue(c: Char): Int {
     return when (c) {
         'I' -> 1
@@ -47,7 +53,7 @@ fun getValue(c: Char): Int {
     }
 }
 
-/** Collect unique chars and sort alphabetically (custom) */
+/** Collect unique characters from string and return them sorted alphabetically. */
 fun removeDuplicateLetters(s: String): String {
     val result = mutableListOf<Char>()
     for (c in s) {
@@ -63,7 +69,7 @@ fun removeDuplicateLetters(s: String): String {
     return sb.toString()
 }
 
-/** Remove smiley faces like :-) or :-( (custom) */
+/** Remove all smiley faces (":-)" or ":-(") and consecutive same brackets from string. */
 fun removeSmiles(input: String): String {
     val result = StringBuilder()
     var i = 0
@@ -90,7 +96,10 @@ fun removeSmiles(input: String): String {
     return result.toString()
 }
 
-/** [168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/) */
+/**
+ * Convert integer column number to Excel column title (1 -> A, 28 -> AB).
+ * [168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
+ */
 fun convertToTitle(columnNumber: Int): String {
     var result = ""
     var column = columnNumber
@@ -130,7 +139,7 @@ fun convertToTitle(columnNumber: Int): String {
     return result
 }
 
-/** helper for convertToTitle */
+/** Convert number 1-26 to corresponding uppercase letter. Helper for convertToTitle. */
 fun getLetterByNumber(num: Int): Char {
     return ('A' + num - 1).toChar()
 }
