@@ -2,6 +2,7 @@ package org.example.topics
 
 import java.util.Stack
 
+/** [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) */
 fun isValid(s: String): Boolean {
     val stack = Stack<Char>()
     for (char in s.toCharArray()) {
@@ -17,6 +18,7 @@ fun isValid(s: String): Boolean {
     return stack.isEmpty()
 }
 
+/** [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) */
 fun dailyTemperatures(temperatures: IntArray): IntArray {
     val stack = ArrayDeque<Int>()
     val result = IntArray(temperatures.size)
@@ -31,6 +33,7 @@ fun dailyTemperatures(temperatures: IntArray): IntArray {
     return result
 }
 
+/** [1475. Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/) */
 fun finalPrices(prices: IntArray): IntArray {
     val stack = ArrayDeque<Int>()
     val res = prices
@@ -45,6 +48,7 @@ fun finalPrices(prices: IntArray): IntArray {
     return res
 }
 
+/** Monotonic stack — next greater element (template) */
 fun monoStack(arr: IntArray): IntArray {
     val stack = ArrayDeque<Int>()
     val res = IntArray(arr.size) { -1 }
@@ -59,6 +63,7 @@ fun monoStack(arr: IntArray): IntArray {
     return res
 }
 
+/** [636. Exclusive Time of Functions](https://leetcode.com/problems/exclusive-time-of-functions/) */
 fun exclusiveTime(n: Int, logs: List<String>): IntArray {
     val stack = ArrayDeque<Int>()
     val result = IntArray(n)
@@ -77,6 +82,7 @@ fun exclusiveTime(n: Int, logs: List<String>): IntArray {
     return result
 }
 
+/** [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) */
 fun evalRPN(tokens: Array<String>): Int {
     val stack = ArrayDeque<Int>()
     for (token in tokens) {
@@ -111,6 +117,7 @@ fun evalRPN(tokens: Array<String>): Int {
     return stack.last()
 }
 
+/** [316. Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/) */
 fun removeDuplicateLetters22(s: String): String {
     val lastIndex = IntArray(26) { -1 }
     for (i in s.indices) {

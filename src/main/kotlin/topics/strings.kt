@@ -1,5 +1,6 @@
 package org.example.topics
 
+/** [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) */
 fun longestCommonPrefix(strs: Array<String>): String {
     var prefix = strs.first()
     for (word in strs) {
@@ -10,6 +11,7 @@ fun longestCommonPrefix(strs: Array<String>): String {
     return prefix
 }
 
+/** [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/) */
 fun romanToInt(s: String): Int {
     var number = 0
     var prevValue = 0
@@ -31,6 +33,7 @@ fun romanToInt(s: String): Int {
     return number
 }
 
+/** helper for romanToInt */
 fun getValue(c: Char): Int {
     return when (c) {
         'I' -> 1
@@ -44,6 +47,7 @@ fun getValue(c: Char): Int {
     }
 }
 
+/** Collect unique chars and sort alphabetically (custom) */
 fun removeDuplicateLetters(s: String): String {
     val result = mutableListOf<Char>()
     for (c in s) {
@@ -59,6 +63,7 @@ fun removeDuplicateLetters(s: String): String {
     return sb.toString()
 }
 
+/** Remove smiley faces like :-) or :-( (custom) */
 fun removeSmiles(input: String): String {
     val result = StringBuilder()
     var i = 0
@@ -85,6 +90,7 @@ fun removeSmiles(input: String): String {
     return result.toString()
 }
 
+/** [168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/) */
 fun convertToTitle(columnNumber: Int): String {
     var result = ""
     var column = columnNumber
@@ -124,6 +130,7 @@ fun convertToTitle(columnNumber: Int): String {
     return result
 }
 
+/** helper for convertToTitle */
 fun getLetterByNumber(num: Int): Char {
     return ('A' + num - 1).toChar()
 }
