@@ -1,7 +1,7 @@
 package org.example.topics
 
 /**
- * Check if integer is a palindrome (reads the same forward and backward).
+ * Проверить, является ли целое число палиндромом (читается одинаково слева и справа).
  * [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/)
  */
 fun isPalindrome(x: Int): Boolean {

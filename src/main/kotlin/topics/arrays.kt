@@ -1,7 +1,7 @@
 package org.example.topics
 
 /**
- * Remove duplicates from sorted array in-place, return count of unique elements.
+ * Удалить дубликаты из отсортированного массива (in-place), вернуть количество уникальных.
  * [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
  */
 fun removeDuplicates(nums: IntArray): Int {
@@ -18,7 +18,7 @@ fun removeDuplicates(nums: IntArray): Int {
 }
 
 /**
- * Students in a queue either take the top sandwich or go to the back. Return count of students who can't eat.
+ * Студенты в очереди берут верхний бутерброд или идут в конец. Вернуть число оставшихся голодными.
  * [1700. Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/)
  */
 fun countStudents(students: IntArray, sandwiches: IntArray): Int {
@@ -40,7 +40,7 @@ fun countStudents(students: IntArray, sandwiches: IntArray): Int {
 }
 
 /**
- * Build target array using "Push"/"Pop" operations on a stream 1..n.
+ * Собрать массив target операциями "Push"/"Pop" над потоком чисел 1..n.
  * [1441. Build an Array With Stack Operations](https://leetcode.com/problems/build-an-array-with-stack-operations/)
  */
 fun buildArray(target: IntArray, n: Int): List<String> {
@@ -64,7 +64,7 @@ fun buildArray(target: IntArray, n: Int): List<String> {
 }
 
 /**
- * Find numbers missing from [1..n] in an array of length n.
+ * Найти числа, пропущенные в диапазоне [1..n] в массиве длины n.
  * [448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)
  */
 fun findDisappearedNumbers(nums: IntArray): List<Int> {
@@ -83,7 +83,7 @@ fun findDisappearedNumbers(nums: IntArray): List<Int> {
 }
 
 /**
- * For each element, count how many numbers in the array are smaller than it.
+ * Для каждого элемента посчитать, сколько чисел в массиве меньше него.
  * [1365. How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/)
  */
 fun smallerNumbersThanCurrent(nums: IntArray): IntArray {
@@ -103,7 +103,7 @@ fun smallerNumbersThanCurrent(nums: IntArray): IntArray {
 }
 
 /**
- * Return array that is the concatenation of nums with itself.
+ * Вернуть массив, являющийся конкатенацией nums с самим собой.
  * [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/)
  */
 fun getConcatenation(nums: IntArray): IntArray {
@@ -116,7 +116,7 @@ fun getConcatenation(nums: IntArray): IntArray {
 }
 
 /**
- * In array [1..n] one number is duplicated, one is missing. Find [duplicate, missing].
+ * В массиве [1..n] одно число повторяется, одно пропущено. Найти [duplicate, missing].
  * [645. Set Mismatch](https://leetcode.com/problems/set-mismatch/)
  */
 fun findErrorNums(nums: IntArray): IntArray {
@@ -135,7 +135,7 @@ fun findErrorNums(nums: IntArray): IntArray {
 }
 
 /**
- * Find maximum number of consecutive 1's in a binary array.
+ * Найти максимальное количество подряд идущих 1 в бинарном массиве.
  * [485. Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
  */
 fun findMaxConsecutiveOnes(nums: IntArray): Int {
@@ -156,7 +156,7 @@ fun findMaxConsecutiveOnes(nums: IntArray): Int {
 }
 
 /**
- * Shuffle array as [x1,y1,x2,y2,...,xn,yn] given nums = [x1..xn, y1..yn].
+ * Перемешать массив как [x1,y1,x2,y2,...,xn,yn] из nums = [x1..xn, y1..yn].
  * [1470. Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/)
  */
 fun shuffle(nums: IntArray, n: Int): IntArray {
@@ -171,7 +171,7 @@ fun shuffle(nums: IntArray, n: Int): IntArray {
 }
 
 /**
- * Find two indices that sum to target.
+ * Найти два индекса, сумма значений которых равна target.
  * [1. Two Sum](https://leetcode.com/problems/two-sum/)
  */
 fun twoSum(nums: IntArray, target: Int): IntArray {

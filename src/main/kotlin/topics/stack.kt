@@ -3,7 +3,7 @@ package org.example.topics
 import java.util.Stack
 
 /**
- * Check if string with '(', ')', '{', '}', '[', ']' has valid bracket pairing.
+ * Проверить, правильно ли расставлены скобки '(' ')' '{' '}' '[' ']'.
  * [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
  */
 fun isValid(s: String): Boolean {
@@ -22,7 +22,7 @@ fun isValid(s: String): Boolean {
 }
 
 /**
- * For each day, find days until a warmer temperature appears.
+ * Для каждого дня найти, через сколько дней будет более тёплая температура.
  * [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
  */
 fun dailyTemperatures(temperatures: IntArray): IntArray {
@@ -40,7 +40,7 @@ fun dailyTemperatures(temperatures: IntArray): IntArray {
 }
 
 /**
- * Apply discount: for each item, subtract the first smaller or equal price to its right.
+ * Применить скидку: для каждого товара вычесть первую меньшую или равную цену справа.
  * [1475. Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/)
  */
 fun finalPrices(prices: IntArray): IntArray {
@@ -57,7 +57,7 @@ fun finalPrices(prices: IntArray): IntArray {
     return res
 }
 
-/** Monotonic stack template: for each element find the next greater element to the right. */
+/** Шаблон монотонного стека: для каждого элемента найти следующий больший справа. */
 fun monoStack(arr: IntArray): IntArray {
     val stack = ArrayDeque<Int>()
     val res = IntArray(arr.size) { -1 }
@@ -73,7 +73,7 @@ fun monoStack(arr: IntArray): IntArray {
 }
 
 /**
- * Calculate exclusive execution time for n functions from a log of start/end events.
+ * Рассчитать эксклюзивное время выполнения n функций по логу стартов/завершений.
  * [636. Exclusive Time of Functions](https://leetcode.com/problems/exclusive-time-of-functions/)
  */
 fun exclusiveTime(n: Int, logs: List<String>): IntArray {
@@ -95,7 +95,7 @@ fun exclusiveTime(n: Int, logs: List<String>): IntArray {
 }
 
 /**
- * Evaluate an expression in Reverse Polish Notation (postfix) using stack.
+ * Вычислить выражение в обратной польской нотации (постфиксной) через стек.
  * [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
  */
 fun evalRPN(tokens: Array<String>): Int {
@@ -133,7 +133,7 @@ fun evalRPN(tokens: Array<String>): Int {
 }
 
 /**
- * Remove duplicate letters to get the smallest lexicographical result preserving order.
+ * Удалить повторяющиеся буквы так, чтобы результат был лексикографически минимальным с сохранением порядка.
  * [316. Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/)
  */
 fun removeDuplicateLetters22(s: String): String {

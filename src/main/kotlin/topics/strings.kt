@@ -1,7 +1,7 @@
 package org.example.topics
 
 /**
- * Find the longest common prefix string amongst an array of strings.
+ * Найти самый длинный общий префикс среди массива строк.
  * [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
  */
 fun longestCommonPrefix(strs: Array<String>): String {
@@ -15,7 +15,7 @@ fun longestCommonPrefix(strs: Array<String>): String {
 }
 
 /**
- * Convert Roman numeral string to integer.
+ * Преобразовать римскую строку в целое число.
  * [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/)
  */
 fun romanToInt(s: String): Int {
@@ -39,7 +39,7 @@ fun romanToInt(s: String): Int {
     return number
 }
 
-/** Map Roman character to its integer value. Helper for romanToInt. */
+/** Преобразовать римский символ в число. Хелпер для romanToInt. */
 fun getValue(c: Char): Int {
     return when (c) {
         'I' -> 1
@@ -53,7 +53,7 @@ fun getValue(c: Char): Int {
     }
 }
 
-/** Collect unique characters from string and return them sorted alphabetically. */
+/** Собрать уникальные символы строки и вернуть отсортированными по алфавиту. */
 fun removeDuplicateLetters(s: String): String {
     val result = mutableListOf<Char>()
     for (c in s) {
@@ -69,7 +69,7 @@ fun removeDuplicateLetters(s: String): String {
     return sb.toString()
 }
 
-/** Remove all smiley faces (":-)" or ":-(") and consecutive same brackets from string. */
+/** Удалить из строки все смайлики ":-)" и ":-(" вместе с идущими подряд такими же скобками. */
 fun removeSmiles(input: String): String {
     val result = StringBuilder()
     var i = 0
@@ -97,7 +97,7 @@ fun removeSmiles(input: String): String {
 }
 
 /**
- * Convert integer column number to Excel column title (1 -> A, 28 -> AB).
+ * Преобразовать номер колонки в заголовок Excel (1 -> A, 28 -> AB).
  * [168. Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
  */
 fun convertToTitle(columnNumber: Int): String {
@@ -139,7 +139,7 @@ fun convertToTitle(columnNumber: Int): String {
     return result
 }
 
-/** Convert number 1-26 to corresponding uppercase letter. Helper for convertToTitle. */
+/** Преобразовать число 1-26 в соответствующую заглавную букву. Хелпер для convertToTitle. */
 fun getLetterByNumber(num: Int): Char {
     return ('A' + num - 1).toChar()
 }
