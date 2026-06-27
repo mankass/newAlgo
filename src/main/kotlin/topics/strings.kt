@@ -1,4 +1,4 @@
-package org.example
+package org.example.topics
 
 fun longestCommonPrefix(strs: Array<String>): String {
     var prefix = strs.first()

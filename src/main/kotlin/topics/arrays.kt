@@ -1,4 +1,4 @@
-package org.example
+package org.example.topics
 
 fun removeDuplicates(nums: IntArray): Int {
     var prevValue = nums.first()
