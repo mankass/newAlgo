@@ -17,6 +17,14 @@
 ### 🧱 Стек
 Используй `ArrayDeque` вместо `Stack` — быстрее и современнее.
 
+### 🔁 fori в Kotlin
+```kotlin
+for (i in 0 until n)       // for (int i = 0; i < n; i++)
+for (i in n - 1 downTo 0)  // for (int i = n - 1; i >= 0; i--)
+for (i in 0..n step 2)     // for (int i = 0; i <= n; i += 2)
+```
+Вместо громоздкого C-стиля — лаконичные `until`, `downTo`, `step`, `indices`.
+
 ### 📦 Массивы
 `IntArray(n) { idx -> ... }` часто компактнее ручного цикла с индексами.
 
