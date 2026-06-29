@@ -143,3 +143,96 @@ fun convertToTitle(columnNumber: Int): String {
 fun getLetterByNumber(num: Int): Char {
     return ('A' + num - 1).toChar()
 }
+
+/**
+ * Проверить, изоморфны ли строки (символы s можно заменить и получить t).
+ * [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)
+ */
+fun isIsomorphic(s: String, t: String): Boolean {
+    val mapTransform = HashMap<Char, Char>()
+    val result = StringBuilder()
+    val setUsing = HashSet<Char>()
+    for(i in 0 until s.length){
+        if (setUsing.contains(s[i])){
+            result.append(mapTransform[s]) as Char
+        }
+    }
+}
+
+/**
+ * Проверить, является ли строка палиндромом (учитывая только буквы и цифры).
+ * [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+ */
+fun isPalindrome(s: String): Boolean {
+    var start = 0
+    var end = s.length - 1
+
+    while (start < end) {
+        if (!s[start].isLetterOrDigit()) {
+            start++
+            continue
+        }
+        if (!s[end].isLetterOrDigit()) {
+            end--
+            continue
+        }
+        if (s[start].lowercase() != s[end].lowercase()) {
+            return false
+        }
+
+        start++
+        end--
+    }
+    return true
+}
+
+/**
+ * Посчитать, сколько строк из patterns встречаются как подстроки в word.
+ * [1967. Number of Strings That Appear as Substrings in Word](https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word/)
+ */
+fun numOfStrings(patterns: Array<String>, word: String): Int {
+    var count = 0
+    for (words in patterns) {
+        if (word.contains(words)) {
+            count++
+        }
+    }
+    return count
+}
+
+/**
+ * Вернуть длину последнего слова в строке.
+ * [58. Length of Last Word](https://leetcode.com/problems/length-of-last-word/)
+ */
+fun lengthOfLastWord(s: String): Int {
+    var count = 0
+    for (i in s.length - 1 downTo 0) {
+        if (s[i] == ' ' && count > 0) {
+            return count
+        }
+        if (s[i].isLetter()) {
+            count++
+        }
+    }
+    return count
+}
+
+/**
+ * Найти индекс первого вхождения needle в haystack (или -1).
+ * [28. Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
+ */
+fun strStr(haystack: String, needle: String): Int {
+    var needleChar = needle.first()
+    val needleSize = needle.length
+    for (i in 0 until haystack.length - needle.length) {
+        if (haystack[i] == needleChar) {
+            if (haystack.length >= i + needle.length) {
+                if (haystack.substring(i, i + needleSize) == needle) {
+                    return i
+                }
+            }
+        }
+    }
+
+    return -1
+}
